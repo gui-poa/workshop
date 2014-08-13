@@ -1,0 +1,10 @@
+<IfModule mod_headers.c>
+ <FilesMatch "\.(php|jpg)$">
+  Header add "Cache-Control" "no-store"
+ </FilesMatch>
+</IfModule>
+
+
+#Desabilita o ETag
+Header unset Etag
+FileETag none
