@@ -1,6 +1,3 @@
- <?php
- header("Cache-Control: max-age=10");
- ?>
 <!doctype html>
 <html>
 	<head>

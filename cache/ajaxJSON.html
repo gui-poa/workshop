@@ -1,0 +1,23 @@
+<html>
+	<head>
+	<script src="jquery-1.10.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	$("#btnjson").click(function(){
+	$.getJSON("getjson.json?v=1",function(ajaxresult){
+	$("#Evento").append(ajaxresult.Evento);
+	$("#Workshop").append(ajaxresult.Workshop);
+	$("#Topico").append(ajaxresult.Topico);
+	});
+	});
+	});
+	</script>
+</head>
+<body>
+
+<button id="btnjson">Carregar JSON</button>
+<p id="Evento">Evento: </p>
+<p id="Workshop">Workshop: </p>
+<p id="Topico">Topico: </p>
+</body>
+</html>

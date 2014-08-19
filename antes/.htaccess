@@ -1,6 +1,7 @@
 <IfModule mod_headers.c>
- <FilesMatch "\.(php|jpg)$">
+ <FilesMatch "\.(html|jpg)$">
   Header add "Cache-Control" "no-store"
+  SetEnv no-gzip 1
  </FilesMatch>
 </IfModule>
 
@@ -8,3 +9,5 @@
 #Desabilita o ETag
 Header unset Etag
 FileETag none
+
+Header unset Last-Modified

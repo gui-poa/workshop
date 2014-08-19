@@ -1,10 +1,14 @@
 <IfModule mod_headers.c>
  <FilesMatch "\.(gif|jpg|png)$">
-  Header add "Cache-Control" "max-age=60"
   #Header add "Cache-Control" "no-store"
+ </FilesMatch>
+
+<FilesMatch "\.(json|xml)$">
+  Header add "Cache-Control" "max-age=20"
  </FilesMatch>
 </IfModule>
 
-#Desabilita o ETag
-Header unset Etag
-FileETag none
+#Desabilitar os cabecalhos de validacao
+#Header unset Etag
+#FileETag none
+#Header unset Last-Modified
