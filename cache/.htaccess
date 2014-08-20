@@ -1,14 +1,15 @@
 <IfModule mod_headers.c>
- <FilesMatch "\.(gif|jpg|png)$">
+ <FilesMatch "\.(php)$">
   #Header add "Cache-Control" "no-store"
  </FilesMatch>
 
 <FilesMatch "\.(json|xml)$">
   Header add "Cache-Control" "max-age=20"
+ # Header add "Cache-Control" "no-store"
  </FilesMatch>
 </IfModule>
 
 #Desabilitar os cabecalhos de validacao
 #Header unset Etag
 #FileETag none
-#Header unset Last-Modified
+#Header unset Last-Modifiedx
