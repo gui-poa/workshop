@@ -8,8 +8,8 @@ ob_start();
 <!doctype html>
 <html>
 	<head>
-	     <title>Non Waiting External CSS</title>
-	    <link href="https://www.cia.gov" rel="preconnect">
+	    <title>Pre-Connect</title>
+	    <link rel="preconnect" href="https://www.tourisme-japon.fr">
 		<style>
 		#teste {
 	        	height:45px; width:100%; float:left; z-index:100; background:#ff9900; background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9900), color-stop(100%,#f47920)); background:-webkit-linear-gradient(top, #ff9900 0%,#f47920 100%); background:linear-gradient(to bottom, #ff9900 0%,#f47920 100%); background: -ms-linear-gradient(top, #ff9900 0%,#f47920 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9900', endColorstr='#f47920',GradientType=0);
@@ -26,7 +26,7 @@ ob_start();
 			    var inner = document.getElementById("botao");
 			    
 			        t = performance.timing;
-			        a = performance.getEntriesByName("https://www.cia.gov/library/publications/the-world-factbook/photo_gallery/as/images/AS_062.jpg")[0]
+			        a = performance.getEntriesByName("https://www.tourisme-japon.fr/images/slideshow/201505/l_159793.jpg")[0]
 			        inner.innerHTML += 
 			        "<br />Start Time = " + a.startTime + " <br />Fetch Start = " + a.fetchStart + " <br />";
 			    }
@@ -43,7 +43,7 @@ ob_start();
 		flush();
 		include("db.php")
 		?>
-		<img src="https://www.cia.gov/library/publications/the-world-factbook/photo_gallery/as/images/AS_062.jpg">
+		<img src="https://www.tourisme-japon.fr/images/slideshow/201505/l_159793.jpg">
 		<div id="botao">
 		<input type="button" onclick="document.body.innerHTML=''" value="Clear">
 		</div>
