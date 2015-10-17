@@ -8,7 +8,7 @@ ob_start();
 <!doctype html>
 <html>
 	<head>
-	     <title>Non Waiting External CSS</title>
+	    <title>Preconnect</title>
 	    <link href="https://www.cia.gov" rel="preconnect">
 		<style>
 		#teste {
